@@ -60,7 +60,7 @@ const Page: React.FC = () => {
   return (
     <div> 
             
-        <div className="min-h-screen bg-white">
+        <div className="min-h-1/2 bg-white">
             <div className="absolute w-full">
                  <Navbar />
             </div>
@@ -69,9 +69,9 @@ const Page: React.FC = () => {
                
 
                 <div className="flex flex-col items-center gap-8 mt-16">
-                    <h2 className="text-4xl font-semibold mb-4">Sign up to find work you love</h2>
+                    <h2 className="text-4xl font-semibold mb-4 text-center">Sign up to find work you love</h2>
 
-                    <div className=" flex items-center gap-6">
+                    <div className=" grid sm:grid-cols-2 items-center gap-6 mx-auto">
                         <Link  href=""
                             className= "flex items-center gap-6 border-2 border-gray-600 px-12 py-2 rounded-3xl font-normal hover:scale-105 transition-transform"
                         >
@@ -120,7 +120,7 @@ const Page: React.FC = () => {
                 <div className="mt-8 flex items-center justify-center  text-gray-800 font-medium ">
 
                     <form action="">
-                        <div className="flex items-center justify-between mx-auto gap-4 w-full px-16">
+                        <div className="grid sm:grid-cols-2 items-center justify-between mx-auto gap-4 w-full px-16">
                             <div>
                               <label htmlFor="text">First name</label>
                               <input type="text" name="firstName" placeholder='First Name' value={formData.firstName} onChange={handleChange}  className='w-full py-3 px-6 border border-gray-500 rounded-xl  hover:ring-blue-700' />  

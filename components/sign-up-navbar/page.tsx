@@ -8,13 +8,13 @@ export const Navbar = () => {
         <div className='w-full'>
             <div className='flex items-center justify-between h-20 w-full mx-6'>
                 {/* 1st Block */}
-                <div className="">
+                <div className="mr-20">
                     <Image
                         src= "https://seekvectors.com/storage/images/Upwork-01.svg"
                         alt=''
-                        className="w-50 h-25"
+                        className="w-50 h-20 object-contain"
                         width={1200}
-                        height={600}
+                        height={400}
                     />
                 </div>
 
