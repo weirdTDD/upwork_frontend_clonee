@@ -12,7 +12,7 @@ export const Navbar = () => {
                     <Image
                         src= "https://seekvectors.com/storage/images/Upwork-01.svg"
                         alt=''
-                        className="w-45 h-25"
+                        className="w-50 h-25"
                         width={1200}
                         height={600}
                     />
