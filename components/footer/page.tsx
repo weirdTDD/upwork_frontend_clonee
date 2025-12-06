@@ -2,11 +2,13 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { BsApple } from 'react-icons/bs'
+import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import { IoLogoAndroid } from 'react-icons/io'
+import { RiLinkedinFill } from 'react-icons/ri'
 
 const Footer = () => {
   return (
-    <footer className='bg-black/90 py-8 mx-5 rounded-t-lg  text-sm text-gray-300'>
+    <footer className='bg-black/90 py-8 mx-5 rounded-t-lg  text-sm text-gray-300 font-semibold'>
         <div className='w-full  mx-auto px-6 lg:px-12 mt-6'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 '>
                 <div>
@@ -53,11 +55,11 @@ const Footer = () => {
                 <div className='flex items-center justify-between mx-auto mt-8 pt-6 text-center text-gray-400'>
                     <div className='flex items-center space-x-8'>
                         <p>Follow Us</p>
-                        <Link href="/"><Facebook strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-900 rounded-full bg-gray-300' /></Link>
-                        <Link href="/"><Linkedin strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-900 rounded-md bg-gray-300'/></Link>
-                        <Link href="/"><Twitter strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-900 rounded-md bg-gray-300'/></Link>
-                        <Link href="/"><Youtube strokeWidth={2} className='w-9 h-9 text-gray-800  fill-gray-300  rounded-md  bg-none' /></Link>
-                        <Link href="/"><Instagram strokeWidth={2} className='w-9 h-9 text-gray-800  fill-gray-300  rounded-md bg-none' /></Link>
+                        <Link href="/"><FaFacebook strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-300 rounded-full bg-gray-900' /></Link>
+                        <Link href="/"><RiLinkedinFill strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-900 rounded-sm bg-gray-300'/></Link>
+                        <Link href="/"><FaXTwitter strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-300 rounded-md bg-none'/></Link>
+                        <Link href="/"><FaYoutube strokeWidth={2} className='w-7 h-7 text-gray-800  fill-gray-300  rounded-md  bg-none' /></Link>
+                        <Link href="/"><FaInstagram strokeWidth={2} className='w-7 h-7 text-gray-800  fill-gray-300  rounded-md bg-none' /></Link>
                     </div>
                     <div className='flex items-center space-x-6'>
                         <p>Mobile app</p>
@@ -66,7 +68,7 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <div className='w-full border-t border-gray-700 mt-8 pt-6 text-center text-gray-400'>
+                <div className='w-full border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 font-semibold'>
                     <p>&copy; 2015-2025 Upwork &reg; Global Inc.</p>
                 </div>
             </div>
