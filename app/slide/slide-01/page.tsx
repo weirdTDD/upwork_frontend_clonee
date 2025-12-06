@@ -1,6 +1,5 @@
 import { CircleUserRound } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
 
 interface SlidePageProps {
