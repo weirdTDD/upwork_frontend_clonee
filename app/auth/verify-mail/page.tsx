@@ -8,21 +8,21 @@ const page = () => {
     <div className="">
         <div>
 
-            <nav className='shadow-sm fixed w-full bg-white z-10 mb-10 hidden md:block'>
+            <nav className='shadow-sm fixed w-full bg-white z-10  md:block'>
                 <div className='w-full'>
                     <div className='flex items-center justify-between h-20 w-full mx-6'>
                         {/* 1st Block */}
                         <div className="mr-20">
                             <Image
                                 src= "https://seekvectors.com/storage/images/Upwork-01.svg"
-                                alt=''
+                                alt='logo'
                                 className="w-50 h-20 object-contain"
                                 width={1200}
                                 height={400}
                             />
                         </div>
 
-                        <div className='hidden md:block'>
+                        <div className=' md:block'>
                             <div className='mr-10 flex items-baseline space-x-5'>
 
                                 <CircleUserRound className="w-6 h-6 mr-8 text-gray-700" />
@@ -49,8 +49,8 @@ const page = () => {
                         height={800}
                     />
 
-                    <div className="flex flex-col items-center">
-                        <h2 className="text-4xl font-semibold  text-gray-800">Verify your email to continue</h2>
+                    <div className="flex flex-col items-center mb-10">
+                        <h2 className="text-4xl font-semibold  text-gray-800 text-center">Verify your email to continue</h2>
                         <p className="text-lg font-medium text-gray-500 text-center mt-8 mb-2">
                             We just sent an email to the address: iamleonard@gmail.com <br/>
                             Please check your mail and select the provided to verify your address.

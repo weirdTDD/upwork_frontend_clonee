@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
+
 import Link from 'next/link'
 import React from 'react'
 import { BsApple } from 'react-icons/bs'
@@ -52,8 +52,8 @@ const Footer = () => {
 
             <div className=' '>
 
-                <div className='flex items-center justify-between mx-auto mt-8 pt-6 text-center text-gray-400'>
-                    <div className='flex items-center space-x-8'>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-2 items-center justify-between  mx-auto mt-8 pt-6 text-center text-gray-400'>
+                    <div className='flex items-center  space-x-8  mt-4 md:mt-0 '>
                         <p>Follow Us</p>
                         <Link href="/"><FaFacebook strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-300 rounded-full bg-gray-900' /></Link>
                         <Link href="/"><RiLinkedinFill strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-900 rounded-sm bg-gray-300'/></Link>
@@ -61,7 +61,7 @@ const Footer = () => {
                         <Link href="/"><FaYoutube strokeWidth={2} className='w-7 h-7 text-gray-800  fill-gray-300  rounded-md  bg-none' /></Link>
                         <Link href="/"><FaInstagram strokeWidth={2} className='w-7 h-7 text-gray-800  fill-gray-300  rounded-md bg-none' /></Link>
                     </div>
-                    <div className='flex items-center space-x-6'>
+                    <div className='flex items-center justify-start md:justify-end space-x-6 mt-6 md:mt-0 '>
                         <p>Mobile app</p>
                         <Link href="/"><BsApple strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-200 rounded-full bg-none' /></Link>
                         <Link href="/"><IoLogoAndroid strokeWidth={0.5} className='w-7 h-7 p-0.5 text-gray-800 fill-gray-200 rounded-full bg-none' /></Link>
