@@ -83,7 +83,7 @@ const page = () => {
             </div>
         </div>
 
-        <div className="">
+        <div className="fixed bottom-0 w-full mt-20 ">
             <Footer />
         </div>
       

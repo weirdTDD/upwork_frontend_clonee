@@ -1,6 +1,7 @@
 "use client"
 
 import { Navbar } from "@/components/sign-up-navbar/page"
+import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react";
@@ -173,32 +174,24 @@ const Page: React.FC = () => {
                                 </select>
                             </div>
 
-                            <div className="mb-8 w-full">
+                            <div className=" flex items-start gap-3 mb-8 w-full">
+                                <Checkbox />
                                 <label>
-                                    <input 
-                                        type="checkbox"
-                                        name="sendEmails"
-                                        checked={formData.sendEmails}
-                                        onChange={handleChange} 
-                                    />
+                                    
                                     Send me helpful emails to find rewarding work and job leads.
                                 </label>
                             </div>
                             
 
-                            <div className="mb-8 w-full">
+                            <div className=" flex items-start gap-3 mb-8 w-full">
+                                <Checkbox />
                                 <label>
-                                    <input
-                                        type="checkbox"
-                                        name="agreeTerms"
-                                        checked={formData.agreeTerms}
-                                        onChange={handleChange}
-                                        required 
-                                    />
                                     Yes, I understand and agree to the Upwork Terms of Service including the User Agreement and Privacy Policy
                                 </label>
 
                             </div>
+
+                             
 
  
                         </div>
@@ -212,8 +205,10 @@ const Page: React.FC = () => {
                                 Create my account
                             </button>
                             
-                            <p>Already have an account?<a href="" className="text-green-600">Log in</a></p>
+                            <p>Already have an account?<a href="" className="text-green-600 ">Log in</a></p>
                         </div>
+
+                        
 
                     </form>
                 </div>
