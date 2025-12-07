@@ -1,6 +1,5 @@
 
 import Link from 'next/link'
-import React from 'react'
 import { BsApple } from 'react-icons/bs'
 import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import { IoLogoAndroid } from 'react-icons/io'
