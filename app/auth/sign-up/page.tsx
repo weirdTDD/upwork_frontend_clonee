@@ -148,7 +148,7 @@ const Page: React.FC = () => {
                             <input 
                                 type="password" 
                                 name="password"
-                                placeholder="Password"
+                                placeholder="********"
                                 value={formData.password}
                                 onChange={handleChange}
                                 minLength={8}

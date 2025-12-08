@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const page = () => {
   return (
-    <div className="">
+    <div className="min-h-screen">
         <div>
 
             <nav className='shadow-sm fixed w-full bg-white z-10  md:block'>
@@ -83,7 +83,7 @@ const page = () => {
             </div>
         </div>
 
-        <div className="fixed bottom-0 w-full mt-20 ">
+        <div className="sticky bottom-0 w-full mt-20 ">
             <Footer />
         </div>
       
