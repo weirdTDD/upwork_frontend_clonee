@@ -2,7 +2,9 @@
 
 import { Search } from "lucide-react";
 import Link from "next/link";
+import { BiHeart } from "react-icons/bi";
 import { MdOutlineBadge } from "react-icons/md";
+import { TbThumbDown } from "react-icons/tb";
 
 export default function UpworkDashboard() {
   return (
@@ -52,9 +54,9 @@ export default function UpworkDashboard() {
 
           {/* Job Section Tabs */}
           <div className="flex gap-6 border-b m-4 ">
-            <button className="font-medium text-green-700 border-b-2 border-green-700 pb-1">
+            <Link href="" className="font-medium text-green-700 border-b-3 border-gray-900 pb-1">
               Best Matches
-            </button>
+            </Link>
             <button>Most Recent</button>
             <button>Saved Jobs</button>
           </div>
@@ -62,7 +64,13 @@ export default function UpworkDashboard() {
           {/* Job Card */}
           <div className="bg-white p-6 rounded-xl shadow-sm border">
             <span className="text-purple-600 font-medium">Featured</span>
-            <p className="text-sm text-gray-500 mt-1">Posted 45 minutes ago</p>
+            <div className="flex items-center justify-between">
+             <p className="text-sm text-gray-500 mt-1">Posted 45 minutes ago</p>
+             <div className="flex gap-4 text-gray-700">
+                <span> <TbThumbDown className="w-5 h-5" /> </span>
+                <span><BiHeart className="w-5 h-5"/> </span>
+             </div>
+            </div>
 
             <h3 className="text-lg font-semibold mt-2">Seeking Designer for Fashion E-commerce Site</h3>
             <p className="mt-3 text-gray-700">
@@ -80,9 +88,8 @@ export default function UpworkDashboard() {
                 <p className="font-medium text-blue-600">Payment verified</p>
                 <p className="text-sm text-gray-500">$30K+ spent • United States</p>
               </div>
-              <div className="flex gap-4 text-gray-400">
-                <span>👍</span>
-                <span>♡</span>
+              <div >
+                
               </div>
             </div>
           </div>
