@@ -1,5 +1,6 @@
 "use client";
 
+import JobCard from "@/components/job-desc/page";
 import { Search } from "lucide-react";
 import Link from "next/link";
 import { BiHeart } from "react-icons/bi";
@@ -62,7 +63,7 @@ export default function UpworkDashboard() {
           </div>
 
           {/* Job Card */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
+          <div className="bg-white p-6 rounded-xl shadow-sm border-b-2 ">
             <span className="text-purple-600 font-medium">Featured</span>
             <div className="flex items-center justify-between">
              <p className="text-sm text-gray-500 mt-1">Posted 45 minutes ago</p>
@@ -93,10 +94,33 @@ export default function UpworkDashboard() {
               </div>
             </div>
           </div>
+
+            <JobCard 
+                title="Modern Web/UX Designer for Data Dashboards"
+                posted="24 minutes ago"
+                rate="Hourly: $20–$35"
+                level="Intermediate"
+                duration="1 to 3 months"
+                hours="30+ hrs/week"
+                description="We are seeking a talented modern web and UX designer with extensive front-end experience to create visually appealing dashboards…"
+                tags={[
+                "Web Design",
+                "Wireframing",
+                "Prototyping",
+                "Mockup",
+                "Graphic Design",
+                ]}
+                verified={true}
+                spent="$40K+"
+                country="Slovenia"
+                proposals="5 to 10"
+                
+            />
+
         </div>
 
         {/* Right Sidebar */}
-        <aside className="w-80 space-y-6">
+        <aside className="w-80 space-y-6 hidden md:block">
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gray-600"></div>
