@@ -97,6 +97,7 @@ export default function UpworkDashboard() {
 
             <JobCard 
                 title="Modern Web/UX Designer for Data Dashboards"
+                featured={true}
                 posted="24 minutes ago"
                 rate="Hourly: $20–$35"
                 level="Intermediate"
