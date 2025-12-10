@@ -1,7 +1,7 @@
 "use client";
 
 import JobCard from "@/components/job-desc/page";
-import { Search } from "lucide-react";
+import { Search, Star } from "lucide-react";
 import Link from "next/link";
 import { BiHeart } from "react-icons/bi";
 import { MdOutlineBadge } from "react-icons/md";
@@ -68,14 +68,14 @@ export default function UpworkDashboard() {
             <div className="flex items-center justify-between">
              <p className="text-sm text-gray-500 mt-1">Posted 45 minutes ago</p>
              <div className="flex gap-4 text-gray-700">
-                <span> <TbThumbDown className="w-5 h-5" /> </span>
-                <span><BiHeart className="w-5 h-5"/> </span>
+                <span> <TbThumbDown className="w-5 h-5 cursor-pointer hover:text-black" /> </span>
+                <span><BiHeart className="w-5 h-5  cursor-pointer hover:text-black"/> </span>
              </div>
             </div>
 
             <h3 className="text-lg font-semibold mt-2">Seeking Designer for Fashion E-commerce Site</h3>
             <p className="mt-3 text-gray-700">
-              We are seeking a creative and experienced Designer/Creative Director for our fashion website redesign project...
+              We are seeking a creative and experienced Designer/Creative Director for our fashion website redesign project. Front End Developers should also have a thorough understanding of web design and SEO optimization. 
             </p>
 
             <div className="flex flex-wrap gap-3 mt-4">
@@ -103,7 +103,7 @@ export default function UpworkDashboard() {
                 level="Intermediate"
                 duration="1 to 3 months"
                 hours="30+ hrs/week"
-                description="We are seeking a talented modern web and UX designer with extensive front-end experience to create visually appealing dashboards…"
+                description="We are seeking a talented modern web and UX designer with extensive front-end experience to create visually appealing dashboards.We are looking for a qualified Front-end developer to join our IT team. You will be responsible for building the ‘client-side’ of our web applications. You should be able to translate our company and customer needs into functional and appealing interactive applications. If you’re interested in creating a user-friendly environment by writing code and moving forward in your career, then this job is for you."
                 tags={[
                 "Web Design",
                 "Wireframing",
@@ -113,6 +113,7 @@ export default function UpworkDashboard() {
                 ]}
                 verified={true}
                 spent="$40K+"
+                stars={3}
                 country="Slovenia"
                 proposals="5 to 10"
                 

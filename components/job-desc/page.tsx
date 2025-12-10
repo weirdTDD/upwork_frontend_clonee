@@ -1,9 +1,11 @@
 "use client";
 
-import { Bookmark, Flag } from "lucide-react";
-import { div } from "motion/react-client";
+import { Star } from "lucide-react";
+import { BiHeart } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdVerified } from "react-icons/md";
+import { SlBadge } from "react-icons/sl";
+import { TbThumbDown } from "react-icons/tb";
 
 interface JobCardProps {
   title: string;
@@ -17,6 +19,7 @@ interface JobCardProps {
   tags: string[];
   country: string;
   spent: string;
+  stars: number;
   verified?: boolean;
   proposals: string;
 }
@@ -33,14 +36,16 @@ export default function JobCard({
   tags,
   country,
   spent,
+  stars,
   verified = true,
   proposals,
 }: JobCardProps) {
   return (
     <div className="border-b-2 border-gray-200 pb-8 pt-4 flex flex-col gap-3 w-full">
       {featured &&( 
-        <div className="text-purple-700 text-sm font bold">
-          <p>Featured</p>
+        <div className="flex items-center gap-2 text-purple-700 text-sm font-bold">
+          <SlBadge className="font-black"/>
+          <p className="">Featured</p>
         </div>
       )}
       {/* Posted Time */}
@@ -51,9 +56,9 @@ export default function JobCard({
         <h2 className="text-[17px] font-semibold leading-tight">{title}</h2>
 
         <div className="flex gap-3 text-gray-500">
-          <Flag className="w-4 h-4 cursor-pointer hover:text-black" />
-            <Bookmark className="w-4 h-4 cursor-pointer hover:text-black" />
-          </div>
+          <span> <TbThumbDown className="w-5 h-5 cursor-pointer hover:text-black" /> </span>
+          <span><BiHeart className="w-5 h-5  cursor-pointer hover:text-black"/> </span>
+        </div>
       </div>
 
       {/* Job Meta */}
@@ -89,8 +94,17 @@ export default function JobCard({
                       Payment verified
                   </div>
                 )}
+                  <div className="flex mt-1">
+                    {[...Array(5)].map((_, i) => (
+                        <Star  key={i} 
+                          className={`w-4 h-4  fill-amber-400 ${i< JobCard.stars ? 'text-yellow-500 fill-amber-400' : 'text-gray-300' }`}
+                        />
+                       
+                    ))}
+                  </div>
+                
 
-                <span className="text-gray-500">⭐ 4.5</span>
+                <span className="text-gray-500">⭐⭐⭐⭐⭐ </span>
 
                 <span className="text-gray-600">{spent} spent</span>
 
