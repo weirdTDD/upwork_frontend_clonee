@@ -8,6 +8,7 @@ import { SlBadge } from "react-icons/sl";
 import { TbThumbDown } from "react-icons/tb";
 
 interface JobCardProps {
+  id: number
   title: string;
   featured?: boolean;
   posted: string;
@@ -25,6 +26,7 @@ interface JobCardProps {
 }
 
 export default function JobCard({
+  id,
   title,
   featured= true,
   posted,

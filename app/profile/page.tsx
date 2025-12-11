@@ -57,6 +57,7 @@ export default function UpworkDashboard() {
           {/* Job Card */}
           <div className="px-3 border-t border-gray-200">
             <JobCard 
+              id={1}
               title="Seeking Designer for Fashion E-commerce Site"
               featured={true}
               posted="24 minutes ago"
@@ -80,6 +81,7 @@ export default function UpworkDashboard() {
 
 
             <JobCard 
+              id={2}
               title="Modern Web/UX Designer for Data Dashboards"
               featured={true}
               posted="45 minutes ago"
@@ -104,6 +106,7 @@ export default function UpworkDashboard() {
             />
 
             <JobCard 
+              id={3}
               title="Modern Web/UX Designer for Data Dashboards"
               featured={true}
               posted="2 hours ago"

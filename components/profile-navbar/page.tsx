@@ -8,6 +8,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { IoAlert } from 'react-icons/io5'
 
 interface NavItem  {
+  id: number;
   label: string;
   link?: string;
   children?: NavItem[];
@@ -15,26 +16,31 @@ interface NavItem  {
 };
 
 const navItems: NavItem [] = [
-  {
+  { 
+    id: 1,
     label:"Features",
     link:"",
     children:[
       {
-        label:"Todo list",
-        link:"#",
-        icon:FcTodoList,
+        label: "Todo list",
+        link: "#",
+        icon: FcTodoList,
+        id: 0
       },{
         label:"Calendar",
         link:"#",
         icon:Calendar1Icon,
+        id: 1
       },{
         label:"Reminders",
         link:"#",
         icon: IoAlert,
+        id: 2
       },{
         label:"Planning",
         link:"#",
         icon: GrFormSchedule,
+        id: 3
       },
     ],
 
@@ -42,24 +48,29 @@ const navItems: NavItem [] = [
 
   },
   {
+    id: 2,
     label:"Company",
     link:"",
     children:[
       {
         label:"Todo list",
         link:"#",
+        id: 4
 
       },{
         label:"Calendar",
         link:"#",
+        id: 5
 
       },{
         label:"Reminders",
         link:"#",
+        id: 6
 
       },{
         label:"Planning",
         link:"#",
+        id: 7
       },
     ],
 
@@ -84,35 +95,41 @@ const Navbar = () => {
               height={400}
             />
 
-            <div className='flex items-center gap-4 transition-all '>
-              {navItems.map((d, i) => (
-                <Link key={i} 
-                  href ={d.link ?? "#"} 
-                  className='relative group px-2 py-3 transition-all'>
-                  <p className='flex items-center gap-2 cursor-pointer text-gray-700 grouop-hover:text-black '>
-                    <span>{d.label}</span>
-                    <IoIosArrowDown className='rotate-180 group-hover:rotate-0 transition-all'/>
-                  </p>
-                  {/* Dropdown */}
-                  {d.children &&(
-                    <div className='absolute right-0 top-10 hidden w-auto flex-col gap-1 rounded-xl bg-gray-100 shadow-lg transition-all group-hover:flex px-5 py-3'>
-                      {d.children.map(({ label, link, icon }) => {
-                        const Icon = icon;
-                        return(
-                        <Link key={i} href={link ?? "#"} className='flex gap-2 cursor-pointer items-center py-1 pl-6 pr-8  text-gray-600  hover:text-black' >
-                          {Icon &&(
-                            <Icon  className='text-blue-800 font-bold'/> 
-                          )}
-                          {label}
-                        </Link>
-                        )
-                      }
-                      )}
+          <div className='flex items-center gap-4 transition-all'>
+              {navItems.map((item) => (
+                <div key={item.id} className="relative group px-2 py-3">
+
+                  {/* TOP-LEVEL BUTTON */}
+                  <div className="flex items-center gap-2 cursor-pointer text-gray-700 group-hover:text-black">
+                    <span>{item.label}</span>
+                    <IoIosArrowDown className="rotate-180 group-hover:rotate-0 transition-all" />
+                  </div>
+
+                  {/* DROPDOWN */}
+                  {item.children && (
+                    <div className="absolute right-0 top-10 hidden group-hover:flex flex-col gap-1 rounded-xl bg-gray-100 shadow-lg px-5 py-3">
+
+                      {item.children.map((child) => {
+                        const Icon = child.icon;
+
+                        return (
+                          <Link
+                            key={child.id}
+                            href={child.link ?? "#"}
+                            className="flex gap-2 items-center py-1 pl-6 pr-8 text-gray-600 hover:text-black"
+                          >
+                            {Icon && <Icon className="text-blue-800 font-bold" />}
+                            {child.label}
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
-                </Link>
+
+                </div>
               ))}
             </div>
+
 
 
           </div>
