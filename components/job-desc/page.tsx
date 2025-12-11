@@ -58,8 +58,8 @@ export default function JobCard({
         <h2 className="text-[17px] font-semibold leading-tight">{title}</h2>
 
         <div className="flex gap-3 text-gray-500">
-          <span> <TbThumbDown className="w-5 h-5 cursor-pointer hover:text-black" /> </span>
-          <span><BiHeart className="w-5 h-5  cursor-pointer hover:text-black"/> </span>
+          <span> <TbThumbDown className="w-5 h-5 cursor-pointer hover:text-black hover:fill-black rotate-y-180" /> </span>
+          <span><BiHeart className="w-5 h-5  cursor-pointer hover:text-black "/> </span>
         </div>
       </div>
 

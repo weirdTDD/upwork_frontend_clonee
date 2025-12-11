@@ -18,26 +18,26 @@ interface NavItem  {
 const navItems: NavItem [] = [
   { 
     id: 1,
-    label:"Features",
+    label:"Find Work",
     link:"",
     children:[
       {
-        label: "Todo list",
+        label: "Development & tech jobs",
         link: "#",
         icon: FcTodoList,
         id: 0
       },{
-        label:"Calendar",
+        label:"Ui/Ux Design & creative",
         link:"#",
         icon:Calendar1Icon,
         id: 1
       },{
-        label:"Reminders",
+        label:"Marketing jobs",
         link:"#",
         icon: IoAlert,
         id: 2
       },{
-        label:"Planning",
+        label:"Admin & support jobs",
         link:"#",
         icon: GrFormSchedule,
         id: 3
@@ -49,28 +49,56 @@ const navItems: NavItem [] = [
   },
   {
     id: 2,
-    label:"Company",
+    label:"Deliver work",
     link:"",
     children:[
       {
-        label:"Todo list",
+        label:"Web Developer",
         link:"#",
         id: 4
 
       },{
-        label:"Calendar",
+        label:"Ui/Ux Designer",
         link:"#",
         id: 5
 
       },{
-        label:"Reminders",
+        label:"Copy Writers",
         link:"#",
         id: 6
 
       },{
-        label:"Planning",
+        label:"Virtual Assistants",
         link:"#",
         id: 7
+      },
+    ],
+
+    icon: IoAlert,
+  },{
+    id: 3,
+    label:"Manage finances",
+    link:"",
+    children:[
+      {
+        label:"Inventory Mangement",
+        link:"#",
+        id: 44
+
+      },{
+        label:"HRM Tools",
+        link:"#",
+        id: 55
+
+      },{
+        label:"Invoice Generators",
+        link:"#",
+        id: 66
+
+      },{
+        label:"Uma AI Scheduling",
+        link:"#",
+        id: 77
       },
     ],
 
@@ -81,7 +109,7 @@ const navItems: NavItem [] = [
 const Navbar = () => {
   return (
   <div>
-    <nav className='shadow-sm fixed w-full bg-white z-10 mb-10 hidden md:block'>
+    <nav className='shadow-sm fixed w-full bg-white/90 z-10 mb-10 hidden md:block'>
       <div className='w-full'>
 
         <div className='flex items-center justify-between h-20 w-full mx-6'>
@@ -89,7 +117,7 @@ const Navbar = () => {
           <div className="flex items-center mr-20 gap-10">
             <Image
               src= "https://seekvectors.com/storage/images/Upwork-01.svg"
-              alt=''
+              alt='upwork logo'
               className="w-50 h-20 object-contain -ml-6"
               width={1200}
               height={400}
@@ -107,7 +135,7 @@ const Navbar = () => {
 
                   {/* DROPDOWN */}
                   {item.children && (
-                    <div className="absolute right-0 top-10 hidden group-hover:flex flex-col gap-1 rounded-xl bg-gray-100 shadow-lg px-5 py-3">
+                    <div className="absolute left-[-18]  top-10 min-w-90  hidden group-hover:flex flex-col gap-1 rounded-xl bg-white shadow-lg px-3 py-3">
 
                       {item.children.map((child) => {
                         const Icon = child.icon;
@@ -116,7 +144,7 @@ const Navbar = () => {
                           <Link
                             key={child.id}
                             href={child.link ?? "#"}
-                            className="flex gap-2 items-center py-1 pl-6 pr-8 text-gray-600 hover:text-black"
+                            className="flex gap-2 items-center py-1 pl-6 pr-8 text-gray-600 hover:text-green-500 hover:scale-105 transition-transform"
                           >
                             {Icon && <Icon className="text-blue-800 font-bold" />}
                             {child.label}
@@ -129,6 +157,8 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
+
+            <Link href="" className='text-gray-600 hover:text-green-600 '>Messages</Link>
 
 
 
@@ -159,7 +189,7 @@ const Navbar = () => {
 
               <CircleEllipsisIcon />
 
-              <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
+              <div className="w-10 h-10 bg-red-300 rounded-full text-center "><p className="mt-2 font-bold text-white">SL</p></div>
               
                 
 

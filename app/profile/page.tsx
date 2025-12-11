@@ -3,22 +3,23 @@
 import JobCard from "@/components/job-desc/page";
 import Navbar from "@/components/profile-navbar/page";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineBadge } from "react-icons/md";
 
 
 export default function UpworkDashboard() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col ">
       {/* Header */}
       <Navbar />
 
       {/* Main Layout */}
-      <div className="flex gap-6 px-10 py-6">
+      <div className="flex gap-6 px-10 py-6 lg:mx-[5%]">
         {/* Left Section */}
         <div className="flex-1 mt-24">
           {/* Banner */}
-          <div className="bg-linear-to-r from-green-800  bg-blue-400 text-white rounded-xl p-3 mb-6 container flex items-center justify-between">
+          <div className="bg-linear-to-r from-green-800 via-green-400  bg-green-900 text-white rounded-xl p-3 mb-6 container flex items-center justify-between xs:mx-10">
             <div className="max-w-md px-2 py-4">
               <h3 className="text-xl font-medium">Freelancer Plus with new perks</h3>
               <h2 className="mt-2 text-2xl font-semibold">100 monthly Connects and full access to Uma, Upwork&apos;s Mindful AI.</h2>
@@ -26,7 +27,15 @@ export default function UpworkDashboard() {
                 Learn more
               </button>
             </div>
-            <div className="w-32 h-32 bg-green-600 rounded-xl hidden sm:block"></div>
+            <div className="relative w-32 h-32 rounded-xl hidden sm:block mr-32 opacity-40">
+              <Image
+                src="/inner.png"
+                alt='inner-carousel'
+                className="w-35 h-35 object-fit rounded-xl "
+                width={1200}
+                height={400}
+            />
+            </div>
           </div>
 
           {/* Job Search */}
@@ -139,7 +148,7 @@ export default function UpworkDashboard() {
         <aside className="w-3/12 space-y-6 hidden md:block mt-24">
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gray-600"></div>
+                <div className="w-12 h-12 rounded-full bg-red-300 text-center "><p className="mt-2 font-bold text-white">SL</p></div>
                 <div className="flex flex-col items-start ">
                     <h3 className="font-semibold">Sam L.</h3>
                     <p className="text-gray-500 text-sm">Web & Mobile Design</p>
@@ -148,7 +157,7 @@ export default function UpworkDashboard() {
             </div>
             
             <div className="mt-8">
-                <a href="" className="text-sm text-green-700 underline">Complete your Profile</a>
+                <a href="" className="text-sm text-green-600 underline">Complete your Profile</a>
 
                 <div className="flex items-center space-x-6">
                     <div className="mt-4 w-2/3 bg-gray-200 h-1 rounded-full">
@@ -167,7 +176,7 @@ export default function UpworkDashboard() {
             </div>
             
             <p className="text-gray-500 text-sm my-2">Increase profile visibility in search results and win more work with an IDV Badge.</p>
-            <Link href="" className="mt-6 text-sm text-green-700 font-medium underline">Get an IDV Badge</Link>
+            <Link href="" className="mt-6 text-sm text-green-600 font-medium underline">Get an IDV Badge</Link>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-sm">
