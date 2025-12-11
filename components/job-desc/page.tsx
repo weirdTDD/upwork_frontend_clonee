@@ -62,12 +62,12 @@ export default function JobCard({
       </div>
 
       {/* Job Meta */}
-      <p className="text-xs text-gray-600">
+      <p className="text-xs text-gray-400">
         {rate} • {level} • Est. Time: {duration}, {hours}
       </p>
 
       {/* Description */}
-      <p className="text-[15px] text-gray-700 max-w-3xl leading-6">
+      <p className="text-[14px] text-gray-600 max-w-3xl leading-6 font-normal">
             {description}{" "}
             <button className="text-green-700 hover:underline">more</button>
       </p>
@@ -94,17 +94,17 @@ export default function JobCard({
                       Payment verified
                   </div>
                 )}
-                  <div className="flex mt-1">
-                    {[...Array(5)].map((_, i) => (
-                        <Star  key={i} 
-                          className={`w-4 h-4  fill-amber-400 ${i< JobCard.stars ? 'text-yellow-500 fill-amber-400' : 'text-gray-300' }`}
-                        />
-                       
-                    ))}
-                  </div>
-                
 
-                <span className="text-gray-500">⭐⭐⭐⭐⭐ </span>
+                <div className="flex mt-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star  key={i} 
+                      className={`w-4 h-4  ${i< stars ? 'text-yellow-500 fill-amber-400' : 'text-gray-300' }`}
+                    />
+                      
+                    
+                  ))}
+                </div>
+
 
                 <span className="text-gray-600">{spent} spent</span>
 

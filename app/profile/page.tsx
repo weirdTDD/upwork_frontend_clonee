@@ -1,35 +1,22 @@
 "use client";
 
 import JobCard from "@/components/job-desc/page";
-import { Search, Star } from "lucide-react";
+import Navbar from "@/components/profile-navbar/page";
+import { Search } from "lucide-react";
 import Link from "next/link";
-import { BiHeart } from "react-icons/bi";
 import { MdOutlineBadge } from "react-icons/md";
-import { TbThumbDown } from "react-icons/tb";
+
 
 export default function UpworkDashboard() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
-      <header className="w-full flex items-center justify-between px-6 py-4 bg-white shadow-sm">
-        <h1 className="text-2xl font-semibold text-green-700">Upwork</h1>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center bg-gray-100 px-3 py-2 rounded-xl">
-            <Search className="w-5 h-5 text-gray-500" />
-            <input
-              type="text"
-              placeholder="Search"
-              className="bg-transparent ml-2 outline-none"
-            />
-          </div>
-          <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Main Layout */}
       <div className="flex gap-6 px-10 py-6">
         {/* Left Section */}
-        <div className="flex-1">
+        <div className="flex-1 mt-24">
           {/* Banner */}
           <div className="bg-linear-to-r from-green-800  bg-blue-400 text-white rounded-xl p-3 mb-6 container flex items-center justify-between">
             <div className="max-w-md px-2 py-4">
@@ -43,9 +30,10 @@ export default function UpworkDashboard() {
           </div>
 
           {/* Job Search */}
-          <div className="flex items-center gap-2 mb-4 border rounded-xl px-4 py-3 bg-gray-100">
+          <div className="flex items-center gap-2 mb-4 border border-gray-300 rounded-xl px-4 py-3 bg-gray-100 hover:border-green-500 shadow-md">
             <Search className="w-5 h-5 text-gray-500" />
             <input
+              id="search-02"
               type="text"
               placeholder="Search for jobs"
               className="w-full bg-transparent outline-none "
@@ -62,67 +50,90 @@ export default function UpworkDashboard() {
             <button>Saved Jobs</button>
           </div>
 
-          {/* Job Card */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border-b-2 ">
-            <span className="text-purple-600 font-medium">Featured</span>
-            <div className="flex items-center justify-between">
-             <p className="text-sm text-gray-500 mt-1">Posted 45 minutes ago</p>
-             <div className="flex gap-4 text-gray-700">
-                <span> <TbThumbDown className="w-5 h-5 cursor-pointer hover:text-black" /> </span>
-                <span><BiHeart className="w-5 h-5  cursor-pointer hover:text-black"/> </span>
-             </div>
-            </div>
-
-            <h3 className="text-lg font-semibold mt-2">Seeking Designer for Fashion E-commerce Site</h3>
-            <p className="mt-3 text-gray-700">
-              We are seeking a creative and experienced Designer/Creative Director for our fashion website redesign project. Front End Developers should also have a thorough understanding of web design and SEO optimization. 
-            </p>
-
-            <div className="flex flex-wrap gap-3 mt-4">
-              <span className="px-3 py-1 rounded-full bg-gray-100">Graphic Design</span>
-              <span className="px-3 py-1 rounded-full bg-gray-100">Adobe Illustrator</span>
-              <span className="px-3 py-1 rounded-full bg-gray-100">Fashion & Beauty</span>
-            </div>
-
-            <div className="mt-5 flex items-center justify-between">
-              <div>
-                <p className="font-medium text-blue-600">Payment verified</p>
-                <p className="text-sm text-gray-500">$30K+ spent • United States</p>
-              </div>
-              <div >
-                
-              </div>
-            </div>
+          <div className="px-3">
+            <h3 className="text-lg text-gray-500 font-medium mb-3">Browse jobs that match your experience to a client&apos;s hiring preferences. Ordered by most relevant.</h3>
           </div>
 
+          {/* Job Card */}
+          <div className="px-3 border-t border-gray-200">
             <JobCard 
-                title="Modern Web/UX Designer for Data Dashboards"
-                featured={true}
-                posted="24 minutes ago"
-                rate="Hourly: $20–$35"
-                level="Intermediate"
-                duration="1 to 3 months"
-                hours="30+ hrs/week"
-                description="We are seeking a talented modern web and UX designer with extensive front-end experience to create visually appealing dashboards.We are looking for a qualified Front-end developer to join our IT team. You will be responsible for building the ‘client-side’ of our web applications. You should be able to translate our company and customer needs into functional and appealing interactive applications. If you’re interested in creating a user-friendly environment by writing code and moving forward in your career, then this job is for you."
-                tags={[
-                "Web Design",
-                "Wireframing",
-                "Prototyping",
-                "Mockup",
-                "Graphic Design",
-                ]}
-                verified={true}
-                spent="$40K+"
-                stars={3}
-                country="Slovenia"
-                proposals="5 to 10"
+              title="Seeking Designer for Fashion E-commerce Site"
+              featured={true}
+              posted="24 minutes ago"
+              rate="Hourly: $20-$35"
+              level="Expert"
+              duration="1 to 3 months"
+              hours="30+ hrs/week"
+              description="Summary We are an accessoryies company immediately seeking a creative and experienced Designer/ Creative Director for our website redesign project. WE need an expect that will design and set the creative direction of our website (redesigned site), ensuring that it aligns with our brand and user experience goals. They will design to create a visually appealling user friendly"
+              tags={[
+              "Graphic Design",
+              "Adobe Illustrator",
+              "Fashion & Beauty"
+              ]}
+              verified={true}
+              spent="$30K+"
+              stars={4}
+              country="United States"
+              proposals="5 to 10"
+              
+            />
+
+
+            <JobCard 
+              title="Modern Web/UX Designer for Data Dashboards"
+              featured={true}
+              posted="45 minutes ago"
+              rate="Hourly: $20-$35"
+              level="Intermediate"
+              duration="1 to 3 months"
+              hours="30+ hrs/week"
+              description="We are seeking a talented modern web and UX designer with extensive front-end experience to create visually appealing dashboards.We are looking for a qualified Front-end developer to join our IT team. You will be responsible for building the ‘client-side’ of our web applications. You should be able to translate our company and customer needs into functional and appealing interactive applications. If you’re interested in creating a user-friendly environment by writing code and moving forward in your career, then this job is for you."
+              tags={[
+              "Web Design",
+              "Wireframing",
+              "Prototyping",
+              "Mockup",
+              "Graphic Design",
+              ]}
+              verified={true}
+              spent="$40K+"
+              stars={3}
+              country="Slovenia"
+              proposals="5 to 10"
                 
             />
+
+            <JobCard 
+              title="Modern Web/UX Designer for Data Dashboards"
+              featured={true}
+              posted="2 hours ago"
+              rate="Hourly: $20-$35"
+              level="Intermediate"
+              duration="1 to 3 months"
+              hours="30+ hrs/week"
+              description="We are seeking a talented modern web and UX designer with extensive front-end experience to create visually appealing dashboards.We are looking for a qualified Front-end developer to join our IT team. You will be responsible for building the ‘client-side’ of our web applications. You should be able to translate our company and customer needs into functional and appealing interactive applications. If you’re interested in creating a user-friendly environment by writing code and moving forward in your career, then this job is for you."
+              tags={[
+              "Web Design",
+              "Wireframing",
+              "Prototyping",
+              "Mockup",
+              "Graphic Design",
+              ]}
+              verified={true}
+              spent="$40K+"
+              stars={5}
+              country="Slovenia"
+              proposals="5 to 10"
+                
+            />
+
+          </div>
+
 
         </div>
 
         {/* Right Sidebar */}
-        <aside className="w-80 space-y-6 hidden md:block">
+        <aside className="w-3/12 space-y-6 hidden md:block mt-24">
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gray-600"></div>
