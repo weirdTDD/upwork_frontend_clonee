@@ -183,13 +183,13 @@ const Navbar = () => {
                   
               </div>
 
-              <BiQuestionMark className='w-7 h-7 '/>
+              <BiQuestionMark className='w-7 h-7 transition-all hover:-translate-y-2.5'/>
 
-              <BiNotification className='w-7 h-7 '/>
+              <BiNotification className='w-7 h-7 transition-all hover:-translate-y-2.5'/>
 
-              <CircleEllipsisIcon />
+              <CircleEllipsisIcon className='transition-all hover:-translate-y-2.5'/>
 
-              <div className="w-10 h-10 bg-red-300 rounded-full text-center "><p className="mt-2 font-bold text-white">SL</p></div>
+              <div className="w-10 h-10 bg-red-300 rounded-full text-center transition-all hover:-translate-y-2.5"><p className="mt-2 font-bold text-white">SL</p></div>
               
                 
 
